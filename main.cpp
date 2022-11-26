@@ -20,5 +20,7 @@ int main() {
 
   std::cout << sumArray(arr, size) << "\n";
   delete[] arr;
+
+  std::cout << isAlphanumeric("ABCD") << "\n";
   return 0;
 }

@@ -38,3 +38,10 @@ TEST_CASE("task c") {
   CHECK_EQ(sumArray(arr, 1), 12);
   delete[] arr;
 }
+
+TEST_CASE("task d") {
+  CHECK(isAlphanumeric("ABCD"));
+  CHECK(isAlphanumeric("Abcd1234xyz"));
+  CHECK_FALSE(isAlphanumeric("KLMN 8-7-6"));
+  CHECK(isAlphanumeric(""));
+}

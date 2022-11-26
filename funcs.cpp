@@ -26,3 +26,11 @@ int sumArray(int *arr, int size) {
   }
   return *arr + sumArray(arr + 1, size - 1);
 }
+
+bool isAlphanumeric(std::string s) {
+  if (s.empty()) {
+    return true;
+  }
+
+  return std::isalnum(s[0]) && isAlphanumeric(s.substr(1, s.size() - 1));
+}
