@@ -34,3 +34,10 @@ bool isAlphanumeric(std::string s) {
 
   return std::isalnum(s[0]) && isAlphanumeric(s.substr(1, s.size() - 1));
 }
+
+bool nestedParens(const std::string &s) {
+  if (s.empty()) {
+    return true;
+  }
+  return s[0] == '(' && s[s.size() - 1] == ')' && nestedParens(s.substr(1, s.size() - 2));
+}

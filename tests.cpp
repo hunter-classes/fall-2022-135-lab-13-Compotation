@@ -45,3 +45,14 @@ TEST_CASE("task d") {
   CHECK_FALSE(isAlphanumeric("KLMN 8-7-6"));
   CHECK(isAlphanumeric(""));
 }
+
+TEST_CASE("task e") {
+  CHECK(nestedParens("((()))"));
+  CHECK(nestedParens("()"));
+  CHECK(nestedParens(""));
+
+  CHECK_FALSE(nestedParens("((("));
+  CHECK_FALSE(nestedParens("(()"));
+  CHECK_FALSE(nestedParens(")("));
+  CHECK_FALSE(nestedParens("a(b)c"));
+}

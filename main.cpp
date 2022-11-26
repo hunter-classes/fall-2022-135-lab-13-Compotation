@@ -22,5 +22,7 @@ int main() {
   delete[] arr;
 
   std::cout << isAlphanumeric("ABCD") << "\n";
+
+  std::cout << nestedParens("((()))") << "\n";
   return 0;
 }
