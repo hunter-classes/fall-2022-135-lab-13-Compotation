@@ -24,5 +24,8 @@ int main() {
   std::cout << isAlphanumeric("ABCD") << "\n";
 
   std::cout << nestedParens("((()))") << "\n";
+
+  int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
+  std::cout << divisible(prices, 9) << "\n";
   return 0;
 }

@@ -41,3 +41,20 @@ bool nestedParens(const std::string &s) {
   }
   return s[0] == '(' && s[s.size() - 1] == ')' && nestedParens(s.substr(1, s.size() - 2));
 }
+
+bool divisible(int *prices, int size) {
+  int sum = sumArray(prices, size);
+  if (sum % 2 == 0) {
+    return divisible(prices, size, sum / 2, sum / 2);
+  }
+  return false;
+}
+
+bool divisible(int *prices, int size, int aliceHas, int bobHas) {
+  if (size == 0) {
+    return aliceHas == 0 && bobHas == 0;
+  }
+
+  return divisible((prices + 1), size - 1, aliceHas - *prices, bobHas) ||
+         divisible((prices + 1), size - 1, aliceHas, bobHas - *prices);
+}
