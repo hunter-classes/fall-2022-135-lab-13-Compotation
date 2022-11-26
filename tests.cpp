@@ -9,3 +9,11 @@ TEST_CASE("task a") {
   CHECK_EQ(printRange(10, -1), "");
   CHECK_EQ(printRange(-10, -9), "-10 -9");
 }
+
+TEST_CASE("task b") {
+  CHECK_EQ(sumRange(1, 3), 6);
+  CHECK_EQ(sumRange(-2, 10), 52);
+  CHECK_EQ(sumRange(-9, -10), 0);
+  CHECK_EQ(sumRange(11, 10), 0);
+  CHECK_EQ(sumRange(8, 8), 8);
+}
